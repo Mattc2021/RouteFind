@@ -21,8 +21,6 @@ def find_matching_ip():
     dst_ip_split = split_ip(dst_ip)
 
     route_list = []
-    hop_list = []
-    type_list = []
     for route in data["RouteList"]:
         split_route = split_ip(route["route"])
         route_list.append(split_route)
@@ -50,6 +48,9 @@ def find_matching_ip():
     if len(match_list) == 0:
         match_list.append("0000000000000000000000000000000/0")
     
+
+    #TODO sort by type if subnets are equal Default 
+    #Use lowest value and look at Liams PNG to determine
     max_subnet = -1
     nextpath = ""
     for match in match_list:
@@ -70,9 +71,6 @@ def find_matching_ip():
     output_label_route.config(text="The Route that matches most is..." + nextpath)
     output_label_next_hop.config(text = "The Next Hop is..." + next_hop)
     output_label_type.config(text = "The type of route is..." + route_type)
-
-
-
 
 def browse_file():
     file_path = filedialog.askopenfilename()
