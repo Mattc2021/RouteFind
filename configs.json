@@ -1,0 +1,84 @@
+[
+    {
+        "interface GigabitEthernet0/0": [
+            "ip address 192.168.4.1 255.255.255.0"
+        ],
+        "interface GigabitEthernet0/1": [],
+        "interface GigabitEthernet0/0/0": [
+            "ip address 10.1.1.1 255.255.255.0"
+        ],
+        "interface GigabitEthernet0/1/0": [
+            "ip address 10.1.2.1 255.255.255.0"
+        ],
+        "interface Vlan1": [],
+        "router ospf 1": [
+            "network 192.168.4.0 0.0.0.255 area 0",
+            "network 10.1.1.0 0.0.0.255 area 0",
+            "network 10.1.2.0 0.0.0.255 area 0"
+        ],
+        "router rip": []
+    },
+    {
+        "interface GigabitEthernet0/0": [
+            "ip address 172.17.0.1 255.255.0.0"
+        ],
+        "interface GigabitEthernet0/1": [],
+        "interface GigabitEthernet0/0/0": [
+            "ip address 10.1.3.1 255.255.255.0"
+        ],
+        "interface GigabitEthernet0/1/0": [
+            "ip address 10.1.2.2 255.255.255.0"
+        ],
+        "interface Vlan1": [],
+        "router ospf 1": [
+            "network 10.1.3.0 0.0.0.255 area 0",
+            "network 10.1.2.0 0.0.0.255 area 0",
+            "network 172.17.0.0 0.0.255.255 area 0"
+        ]
+    },
+    {
+        "interface GigabitEthernet0/0": [
+            "ip address 172.16.0.1 255.255.0.0"
+        ],
+        "interface GigabitEthernet0/1": [],
+        "interface GigabitEthernet0/0/0": [
+            "ip address 10.1.1.2 255.255.255.0"
+        ],
+        "interface GigabitEthernet0/1/0": [
+            "ip address 10.1.3.2 255.255.255.0"
+        ],
+        "interface Vlan1": [],
+        "router ospf 1": [
+            "network 10.1.1.0 0.0.0.255 area 0",
+            "network 10.1.3.0 0.0.0.255 area 0",
+            "network 172.16.0.0 0.0.255.255 area 0"
+        ],
+        "router rip": []
+    },
+    {
+        "interface GigabitEthernet0/0": [
+            "ip address 172.16.0.2 255.255.0.0"
+        ],
+        "interface GigabitEthernet0/1": [
+            "ip address 192.168.2.1 255.255.255.0"
+        ],
+        "interface Vlan1": [],
+        "router ospf 1": [
+            "network 172.16.0.0 0.0.255.255 area 0",
+            "network 192.168.2.0 0.0.0.255 area 0"
+        ]
+    },
+    {
+        "interface GigabitEthernet0/0": [
+            "ip address 172.17.0.2 255.255.0.0"
+        ],
+        "interface GigabitEthernet0/1": [
+            "ip address 192.168.1.1 255.255.255.0"
+        ],
+        "interface Vlan1": [],
+        "router ospf 1": [
+            "network 172.17.0.0 0.0.255.255 area 0",
+            "network 192.168.1.0 0.0.0.255 area 0"
+        ]
+    }
+]
