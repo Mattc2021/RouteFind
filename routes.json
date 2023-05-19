@@ -75,5 +75,33 @@
             "next_hop": "",
             "type": "Static"
         }
-    ]
+    ],
+    "Routes2": [
+        {
+            "route": "192.168.128.0/24",
+            "next_hop": "192.168.128.2",
+            "type": "Local"
+        },
+        {
+            "route": "10.0.0.0/8",
+            "next_hop": "10.0.0.1",
+            "type": "RIPv2"
+        },
+        {
+            "route": "172.16.0.0/12",
+            "next_hop": "172.16.1.1",
+            "type": "OSPF"
+        },
+        {
+            "route": "192.168.0.0/16",
+            "next_hop": "192.168.0.1",
+            "type": "Static"
+        },
+        {
+            "route": "198.51.100.0/24",
+            "next_hop": "198.51.100.1",
+            "type": "EIGRP"
+        }
+    ]        
+    
 }

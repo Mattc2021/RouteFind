@@ -58,7 +58,7 @@ def find_matching_ip():
         if (int(subnet) > max_subnet):
             nextpath = match
             max_subnet = int(subnet)
-    
+
     binaryToDecimal = lambda binary_ip: str(ipaddress.IPv4Address(int(binary_ip.split('/')[0], 2))) + '/' + binary_ip.split('/')[1]
     nextpath = binaryToDecimal(nextpath)
 
@@ -67,6 +67,7 @@ def find_matching_ip():
             next_hop = route["next_hop"]
             route_type = route["type"]
             break
+        
 
     output_label_route.config(text="The Route that matches most is..." + nextpath)
     output_label_next_hop.config(text = "The Next Hop is..." + next_hop)
